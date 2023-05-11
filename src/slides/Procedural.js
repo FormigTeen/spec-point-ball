@@ -3,7 +3,7 @@ import {
     FlexBox,
     Box,
     Heading,
-    Slide, UnorderedList, ListItem, Appear, Stepper
+    Slide, UnorderedList, ListItem, Stepper
 } from 'spectacle';
 
 const Procedural = () => <Slide>
@@ -17,29 +17,46 @@ const Procedural = () => <Slide>
             </Box>
             <Box width="100%" height="100%">
                 <FlexBox flexDirection="column" height="100%">
-                    <Heading margin="0px 32px" color="primary" fontSize="30px">
-                        É uma Evolução do Paradigma
-                        <Stepper tagName="span" alwaysVisible priority="1" values={Array(0).keys()}>
+                        <Stepper tagName="span" alwaysVisible values={[0, 1]}>
                             {(value, step, isActive) =>
                                 <Choose>
-                                    <When condition={ step === -1 }> Imperativo</When>
-                                    <Otherwise> Estruturado</Otherwise>
+                                    <When condition={ step === -1 }>
+                                        <Box>
+                                            <Heading margin="0px 32px" color="primary" fontSize="30px">
+                                                Os Fundamentos do Paradigma Imperativo
+                                            </Heading>
+                                            <UnorderedList fontSize="25px">
+                                                <ListItem>Se Preocupa com o <i>Como?</i></ListItem>
+                                                <ListItem>Comandos Sequenciais</ListItem>
+                                            </UnorderedList>
+                                        </Box>
+                                    </When>
+                                    <When condition={value === 0}>
+                                        <Box>
+                                        <Heading margin="0px 32px" color="primary" fontSize="30px">
+                                            Os Fundamentos do Paradigma Estrutural
+                                        </Heading>
+                                        <UnorderedList fontSize="25px">
+                                            <ListItem><u>Não uso do <b>Goto</b> ou <b>Jump</b></u></ListItem>
+                                            <ListItem>Definições de Variáveis</ListItem>
+                                            <ListItem>Estruturas de Seleção</ListItem>
+                                            <ListItem>Estruturas de Repetição</ListItem>
+                                        </UnorderedList>
+                                        </Box>
+                                    </When>
+                                    <Otherwise>
+                                        <Box>
+                                            <Heading margin="0px 32px" color="primary" fontSize="30px">
+                                                Seus Fundamentos
+                                            </Heading>
+                                            <UnorderedList fontSize="25px">
+                                                <ListItem>Estrutura de Procedimentos e Funções Modulares</ListItem>
+                                            </UnorderedList>
+                                        </Box>
+                                    </Otherwise>
                                 </Choose>
                             }
                         </Stepper>
-                    </Heading>
-                        <UnorderedList fontSize="25px">
-                            <Appear priority="0">
-                                <ListItem>Se Preocupa com o <i>Como?</i></ListItem>
-                                <ListItem>Comandos Sequenciais</ListItem>
-                            </Appear>
-                            <Appear priority="1">
-                                <ListItem>Não uso do <b>Goto</b> ou <b>Jump</b></ListItem>
-                                <ListItem>Definições de Variáveis</ListItem>
-                                <ListItem>Estruturas de Seleção</ListItem>
-                                <ListItem>Estruturas de Repetição</ListItem>
-                            </Appear>
-                        </UnorderedList>
                 </FlexBox>
             </Box>
         </FlexBox>
