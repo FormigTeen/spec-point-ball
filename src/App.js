@@ -3,7 +3,6 @@ import Logo from "./slides/Logo";
 import {
   FlexBox,
   Heading,
-  SpectacleLogo,
   UnorderedList,
   CodeSpan,
   OrderedList,
@@ -11,7 +10,6 @@ import {
   FullScreen,
   Progress,
   Appear,
-  Stepper,
   Slide,
   Deck,
   Text,
@@ -21,7 +19,6 @@ import {
   CodePane,
   MarkdownSlide,
   MarkdownSlideSet,
-  Notes
 } from 'spectacle';
 import Title from "./slides/Title";
 import Procedural from "./slides/Procedural";
