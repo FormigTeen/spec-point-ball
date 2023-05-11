@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "react-app"
+  ],
+  "plugins": [
+    "jsx-control-statements"
+  ]
+}

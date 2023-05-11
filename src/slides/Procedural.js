@@ -3,10 +3,8 @@ import {
     FlexBox,
     Box,
     Heading,
-    Slide, CodePane, UnorderedList, ListItem, Appear, Stepper
+    Slide, UnorderedList, ListItem, Appear, Stepper
 } from 'spectacle';
-
-
 
 const Procedural = () => <Slide>
         <FlexBox flexDirection="row" alignItems="start" flex={1}>
@@ -21,18 +19,27 @@ const Procedural = () => <Slide>
                 <FlexBox flexDirection="column" height="100%">
                     <Heading margin="0px 32px" color="primary" fontSize="30px">
                         É uma Evolução do Paradigma
-                        <Stepper tagName="span" alwaysVisible priority="0" values={[" Imperativo", " Estruturado"]}>
-                            {(value, step, isActive) => value
+                        <Stepper tagName="span" alwaysVisible priority="1" values={Array(0).keys()}>
+                            {(value, step, isActive) =>
+                                <Choose>
+                                    <When condition={ step === -1 }> Imperativo</When>
+                                    <Otherwise> Estruturado</Otherwise>
+                                </Choose>
                             }
                         </Stepper>
                     </Heading>
-                    <Appear priority="1">
                         <UnorderedList fontSize="25px">
-                            <ListItem>Se Preocupa com o <i>Como?</i></ListItem>
-                            <ListItem>Comandos Sequenciais</ListItem>
+                            <Appear priority="0">
+                                <ListItem>Se Preocupa com o <i>Como?</i></ListItem>
+                                <ListItem>Comandos Sequenciais</ListItem>
+                            </Appear>
+                            <Appear priority="1">
+                                <ListItem>Não uso do <b>Goto</b> ou <b>Jump</b></ListItem>
+                                <ListItem>Definições de Variáveis</ListItem>
+                                <ListItem>Estruturas de Seleção</ListItem>
+                                <ListItem>Estruturas de Repetição</ListItem>
+                            </Appear>
                         </UnorderedList>
-
-                    </Appear>
                 </FlexBox>
             </Box>
         </FlexBox>
