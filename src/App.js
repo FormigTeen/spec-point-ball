@@ -1,4 +1,5 @@
 
+import Logo from "./slides/Logo";
 import {
   FlexBox,
   Heading,
@@ -23,6 +24,7 @@ import {
   Notes
 } from 'spectacle';
 import Title from "./slides/Title";
+import Procedural from "./slides/Procedural";
 
 const formidableLogo =
     'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
@@ -80,6 +82,7 @@ const Presentation = () => (
     <Deck theme={theme} template={template}>
       <Logo />
       <Title />
+        <Procedural />
       <Slide
           transition={{
             from: {
