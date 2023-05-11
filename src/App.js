@@ -1,5 +1,3 @@
-
-import Logo from "./slides/Logo";
 import {
   FlexBox,
   Heading,
@@ -26,17 +24,16 @@ import Procedural from "./slides/Procedural";
 const formidableLogo =
     'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
-// SPECTACLE_CLI_THEME_START
 const theme = {
-  colors: {
-    primary: '##f1f2f6',
-    secondary: '#ff4c30\n',
-    tertiary: '#faf4d3\n'
-  },
-  fonts: {
-    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
-    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
-  }
+    colors: {
+        primary: '##f1f2f6',
+        secondary: '#ff4c30\n',
+        tertiary: '#faf4d3\n'
+    },
+    fonts: {
+        header: 'Lato, "Open Sans Condensed", Helvetica, Arial, sans-serif',
+        text: 'Lato, "Open Sans Condensed", Helvetica, Arial, sans-serif'
+    },
 };
 // SPECTACLE_CLI_THEME_END
 
@@ -77,7 +74,6 @@ const SlideFragments = () => (
 
 const Presentation = () => (
     <Deck theme={theme} template={template}>
-      <Logo />
       <Title />
         <Procedural />
       <Slide
