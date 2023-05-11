@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/spec-point-ball/static/js/main.0c1c7697.js",
+    "main.js": "/spec-point-ball/static/js/main.c4aa3802.js",
     "static/js/787.d8182be2.chunk.js": "/spec-point-ball/static/js/787.d8182be2.chunk.js",
     "index.html": "/spec-point-ball/index.html",
-    "main.0c1c7697.js.map": "/spec-point-ball/static/js/main.0c1c7697.js.map",
+    "main.c4aa3802.js.map": "/spec-point-ball/static/js/main.c4aa3802.js.map",
     "787.d8182be2.chunk.js.map": "/spec-point-ball/static/js/787.d8182be2.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0c1c7697.js"
+    "static/js/main.c4aa3802.js"
   ]
 }
