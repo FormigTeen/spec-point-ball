@@ -14,17 +14,20 @@ import {
   Grid,
   Box,
   Image,
-  CodePane,
   MarkdownSlide,
   MarkdownSlideSet,
 } from 'spectacle';
-import Title from "./slides/Title";
-import Procedural from "./slides/Procedural";
+import Title from "./PointBall/Slides/Title";
+import Procedural from "./PointBall/Slides/Procedural";
+import CodeProcedural from "./PointBall/Slides/CodeProcedural";
+import Funcional from "./PointBall/Slides/Funcional";
+import CodeFuncional from "./PointBall/Slides/CodeFuncional";
+import CodeBadFuncional from "./PointBall/Slides/CodeBadFuncional";
 
 const formidableLogo =
     'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
 
-const theme = {
+export const Theme = {
     colors: {
         primary: '##f1f2f6',
         secondary: '#ff4c30\n',
@@ -33,7 +36,7 @@ const theme = {
     fonts: {
         header: 'Lato, "Open Sans Condensed", Helvetica, Arial, sans-serif',
         text: 'Lato, "Open Sans Condensed", Helvetica, Arial, sans-serif'
-    },
+    }
 };
 // SPECTACLE_CLI_THEME_END
 
@@ -73,9 +76,13 @@ const SlideFragments = () => (
 );
 
 const Presentation = () => (
-    <Deck theme={theme} template={template}>
+    <Deck theme={Theme} template={template}>
       <Title />
         <Procedural />
+        <CodeProcedural />
+        <Funcional />
+        <CodeBadFuncional />
+        <CodeFuncional />
       <Slide
           transition={{
             from: {
@@ -165,27 +172,6 @@ const Presentation = () => (
         </Grid>
       </Slide>
       <SlideFragments />
-      <Slide>
-        <CodePane language="jsx">{`
-        import { createClient, Provider } from 'urql';
-
-        const client = createClient({ url: 'https://0ufyz.sse.codesandbox.io' });
-
-        const App = () => (
-          <Provider value={client}>
-            <Todos />
-          </Provider>
-        );
-        `}</CodePane>
-        <Box height={20} />
-        <CodePane language="java" showLineNumbers={false}>{`
-        public class NoLineNumbers {
-          public static void main(String[] args) {
-            System.out.println("Hello");
-          }
-        }
-        `}</CodePane>
-      </Slide>
       <div>
         <Slide>
           <Heading>This is a slide embedded in a div</Heading>
