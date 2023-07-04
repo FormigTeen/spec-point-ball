@@ -23,6 +23,9 @@ import CodeProcedural from "./PointBall/Slides/CodeProcedural";
 import Funcional from "./PointBall/Slides/Funcional";
 import CodeFuncional from "./PointBall/Slides/CodeFuncional";
 import CodeBadFuncional from "./PointBall/Slides/CodeBadFuncional";
+import Declarativo from './PointBall/Slides/Declarativo';
+import CodeDeclarativo from './PointBall/Slides/CodeDeclarativo';
+import CodeDeclarativo2 from './PointBall/Slides/CodeDeclarativo2';
 
 const formidableLogo =
     'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
@@ -83,6 +86,9 @@ const Presentation = () => (
         <Funcional />
         <CodeBadFuncional />
         <CodeFuncional />
+        <Declarativo />
+        <CodeDeclarativo />
+        <CodeDeclarativo2 />
       <Slide
           transition={{
             from: {
